@@ -1,28 +1,16 @@
-calcularValorDescuento = function(){
-    let monto;
-    let descuento;
-    let porcentaje;
-
-    descuento = (monto * porcentaje) / 100;
-    return descuento;
+calcularSubtotal = function(precio, cantidad) {
+    return precio * cantidad;
+}
+calcularValorDescuento = function(monto, porcentajeDescuento) {
+    return (monto * porcentajeDescuento) / 100;
+}
+calcularIVA = function(monto) {
+    const tasaIVA = 0.12;
+    return monto * tasaIVA;
 }
 
-calcularIVA = function(){
-    let iva;
-    totalIva = iva * 0.12;
-    return totalIva
-}
-
-calcularSubtotal = function(subtotal,cantidad){
-    let sub;
-    sub = (subtotal * cantidad);
-    return sub;
-}
-
-calcularTotal = function(calcularSubtotal,descuento,totalIva){
-    let total;
-    total = (calcularSubtotal - descuento + totalIva);
-    return total;
+calcularTotal = function(subtotal, descuento, iva) {
+    return subtotal - descuento + iva;
 }
 
 mostrarTexto = function(IdComponente, mensaje){
