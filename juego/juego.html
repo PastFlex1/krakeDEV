@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piedra, Papel o Tijera</title>
+    <script src="juego.js"></script>
+    <script src="utilitarios.js"></script>
+    <script src="serviciosJuego.js"></script>
+    <link rel="stylesheet" href="juego.css">
+</head>
+<body>
+    <div class="titulo">
+        <h1>Juega Piedra, Papel o Tijera</h1>
+    </div>
+    <div class="imagen">
+        <img src="imagenes/papel.png" alt="Papel" width="200px" onclick="jugar('papel');">
+        <img src="imagenes/piedra.png" alt="Piedra" width="200px" onclick="jugar('piedra');">
+        <img src="imagenes/tijeras.png" alt="Tijeras" width="200px" onclick="jugar('tijeras');">
+    </div>
+    <div class="imagen">
+        <img src="" alt="" width="400px" id="imagenComputador">
+    </div>
+    <div>
+        <label id="lbljugador" class="jugador"></label>
+    </div>
+    <div>
+        <label id="lblpuntosUsuario">Puntos jugador: 0</label><br>
+        <label id="lblpuntosComputador">Puntos computador: 0</label>
+    </div>
+</body>
+</html>
