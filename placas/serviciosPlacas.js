@@ -121,4 +121,72 @@ obtenerProvincia = function (placa) {
   }
   return validarProvincia;
 }
-  
+
+obtenerTipoVehiculo = function(placa){
+    let esTipo = null;
+    let segundo = placa.charAt(1);
+    if(segundo.charCodeAt(0) === 65 || segundo.charCodeAt(0) === 90){
+        esTipo = "vahiculos comerciales como taxis o autobuses";
+    }
+    
+    if(segundo.charCodeAt(0) === 69){
+        esTipo = "vehiculo gubernamental";
+    }
+
+    if(segundo.charCodeAt(0) === 88){
+        esTipo = "vehiculo de uso oficial";
+    }
+
+    if(segundo.charCodeAt(0) === 83){
+        esTipo = "vehiculos del gobierno provincial";
+    }
+
+    if(segundo.charCodeAt(0) === 77){
+        esTipo = "vehiculo municipales";
+    }
+
+    if(segundo.charCodeAt(0) != 65 && segundo.charCodeAt(0) != 90 && segundo.charCodeAt(0) != 69 && segundo.charCodeAt(0) != 88 && segundo.charCodeAt(0) != 83 && segundo.charCodeAt(0) != 77){
+        esTipo = "vehiculos privados";
+    }
+    return esTipo;
+
+}
+
+obtenerDiaPicoyPlaca = function(placa){
+    let esPico = null;
+    let ultimo = placa.charCodeAt(placa.length - 1);
+    if(ultimo === 49 || ultimo === 50){
+        esPico = "El día que le toca pico y placa es lunes";
+    }
+    if(ultimo === 51 || ultimo === 52){
+        esPico = "El dia que le toca pico y placa es martes";
+    }
+    if(ultimo === 53 || ultimo === 54){
+        esPico = "El dia que le toca pico y placa es miercoles";
+    }
+    if(ultimo === 55 || ultimo === 56){
+        esPico = "El dia que le toca pico y placa es jueves";
+    }
+    if(ultimo === 57 || ultimo === 48){
+        esPico = "El dia que le toca pico y placa es viernes"
+    }
+    return esPico;
+}
+
+limpiar = function(){
+    mostrarTexto("lblvalidar","");
+    mostrarTexto("lblvalidar2","");
+    mostrarTexto("lblvalidar3","");
+    mostrarTexto("lblvalidar4","");
+    mostrarTexto("lblvalidar5","");
+    mostrarTexto("lblvalidar6","");
+    mostrarTexto("lblvalidar7","");
+    mostrarTexto("lblvalidar8","");
+    mostrarTexto("lblestructura","");
+    mostrarTexto("lblprovincia","");
+    mostrarTexto("lbltipo","");
+    mostrarTexto("lblPico","");
+
+    document.getElementById("txtValidar").value = "";
+}
+   
