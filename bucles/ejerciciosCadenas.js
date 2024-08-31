@@ -26,3 +26,30 @@ invertirCadena = function(cadena){
         mostrarTexto("lblresultado",caracter);
     }
 }
+
+buscarLetra = function(cadena,letra){
+    let letralterada;
+    let existeLetra = false;
+    for(let i = 0 ;i < cadena.length ;i++){
+        letra = cadena.charAt(i);
+        if(letralterada == letra){
+            existeLetra = true;
+        }
+    }
+    if(existeLetra == true){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+contarMayusculas = function(cadena){
+    let letra;
+    let contadorMayusculas = 0;
+    for(let i = 0; i > letra.length;i++){
+        letra = cadena.charAt(i);
+        if(esMayuscula(letra)){
+            contadorMayusculas++;
+        }
+    }
+}
