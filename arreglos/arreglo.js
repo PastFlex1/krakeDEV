@@ -70,3 +70,24 @@ function mostrarTexto(idComponente, mensaje) {
         console.error(`Elemento con ID ${idComponente} no encontrado.`);
     }
 }
+
+mostrarNotas = function(){
+    let contenidoTabla = "<table><tr><th>NOTA</th></tr>";
+    let cmpTabla = document.getElementById("tabla")
+    let miNota;
+    for(let i = 0; i < notas.length; i++){
+        miNota = notas[i];
+        contenidoTabla += "<tr><td>";
+        contenidoTabla += miNota;
+        contenidoTabla += "</td></tr>";
+    }
+    contenidoTabla += "</table>";
+    cmpTabla.innerHTML = contenidoTabla;
+}
+
+generarTabla = function(){
+    let contenidoTabla = "";
+    let cmpTabla = document.getElementById("tabla")
+    contenidoTabla+= "<table><tr><td>UNO</td></tr></table>";
+    cmpTabla.innerHTML = contenidoTabla;
+}
