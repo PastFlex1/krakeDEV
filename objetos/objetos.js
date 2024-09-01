@@ -38,3 +38,54 @@ crearProducto = function(){
         console.log("Ambos tienen el mismo stock");
     }
 }
+
+modificarAtributos = function(){
+    let cuenta = {
+        numero: "54456745544",
+        saldo: 0.0,
+    }
+
+    cuenta.saldo = 100;
+    cuenta.saldo += 10;
+    console.log(cuenta.saldo);
+}
+
+crearCliente = function(){
+    let cliente = {
+        cedula: "1708143977",
+        nombre: "Alex"
+    }
+    //Crea un objeto a base del objeto anterior
+    let cliente1 = {};
+        cliente1.nombre = "Alexis";
+        cliente1.cedula = "1726690744";
+}
+
+probarIncrementoSaldo = function(){
+    let cta={cuenta: "123932", saldo: 40}
+    incrementarSaldo(cta,100);
+    console.log(cta.saldo);
+}
+
+probarDeterminarMayor = function(){
+    let p1 = {nombre: "Alex", edad: 18}
+    let p2 = {nombre: "Leonel", edad: 17}
+    person = determinarMayoor(p1,p2);
+    if(person != null){
+        console.log("El mayor es: " + person.nombre);
+    }
+}
+
+incrementarSaldo = function(cuenta,monto){
+    cuenta.saldo += monto;
+}
+
+determinarMayoor = function(persona1,persona2){
+    if(persona1.edad > persona2.edad){
+        return persona1;
+    }else if(persona1.edad < persona2.edad){
+        return persona2;
+    }else{
+        return null;
+    }
+}
