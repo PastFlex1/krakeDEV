@@ -30,20 +30,22 @@ window.onload = function() {
 };
 
 deshabilitarCampos = function() {
-    deshabilitarComponente("txtCedula");
-    deshabilitarComponente("txtNombre");
-    deshabilitarComponente("txtApellido");
-    deshabilitarComponente("txtSueldo");
-    deshabilitarComponente("btnGuardar");
-};
+    document.getElementById('txtBusquedaCedula').disabled = true;
+    document.getElementById('txtCedula').disabled = true;
+    document.getElementById('txtNombre').disabled = true;
+    document.getElementById('txtApellido').disabled = true;
+    document.getElementById('txtSueldo').disabled = true;
+    document.getElementById('btnGuardar').disabled = true;
+}
 
 
 ejecutarNuevo = function() {
-    habilitarComponente("txtCedula");
-    habilitarComponente("txtNombre");
-    habilitarComponente("txtApellido");
-    habilitarComponente("txtSueldo");
-    habilitarComponente("btnGuardar");
+    document.getElementById('txtBusquedaCedula').disabled = false;
+    document.getElementById('txtCedula').disabled = false;
+    document.getElementById('txtNombre').disabled = false;
+    document.getElementById('txtApellido').disabled = false;
+    document.getElementById('txtSueldo').disabled = false;
+    document.getElementById('btnGuardar').disabled = false;
     esNuevo = true;
 };
 
