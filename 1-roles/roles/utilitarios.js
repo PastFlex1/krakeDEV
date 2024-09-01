@@ -35,19 +35,37 @@ recuperarFloat = function(idComponente){
     return valorFlotante;
  }
 
- ocultarComponente = function(idComponente) {
-    let componente = document.getElementById(idComponente);
-    if (componente) {
-        componente.style.display = "none";
-    }
+mostrarComponente = function(idComponente){
+    document.getElementById(idComponente).style.display = "block";
+}
+
+ocultarComponente = function(idComponente){
+    document.getElementById(idComponente).style.display = "none";
+}
+
+deshabilitarComponente = function(idComponente){
+    document.getElementById(idComponente).disabled = true;
+}
+
+habilitarComponente = function(idComponente){
+    document.getElementById(idComponente).disabled = false;
+}
+
+mostrarOpcionEmpleado = function() {
+    mostrarComponente('divEmpleado');
+    ocultarComponente('divRol');
+    ocultarComponente('divResumen');
 };
 
-mostrarComponente = function(idComponente) {
-    let componente = document.getElementById(idComponente);
-    if (componente) {
-        componente.style.display = "block";
-    }
+mostrarOpcionRol = function() {
+    mostrarComponente('divRol');
+    ocultarComponente('divEmpleado');
+    ocultarComponente('divResumen');
 };
 
-
+mostrarOpcionResumen = function() {
+    mostrarComponente('divResumen');
+    ocultarComponente('divEmpleado');
+    ocultarComponente('divRol');
+};
 
