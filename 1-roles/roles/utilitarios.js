@@ -43,11 +43,11 @@ ocultarComponente = function(idComponente){
     document.getElementById(idComponente).style.display = "none";
 }
 
-deshabilitarComponente = function(idComponente){
+deshabilitarTexto = function(idComponente){
     document.getElementById(idComponente).disabled = true;
 }
 
-habilitarComponente = function(idComponente){
+habilitarTexto = function(idComponente){
     document.getElementById(idComponente).disabled = false;
 }
 

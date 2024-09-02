@@ -44,13 +44,12 @@
                 type="text"
                 class="cajaTexto"
                 id="txtBusquedaCedula"
-                disabled
               />
               <div class="error" id="lblErrorBusqueda"></div>
             </div>
           </div>
           <div class="contenedorBoton">
-            <input type="button" value="BUSCAR" class="estiloBoton" />
+            <input type="button" value="BUSCAR" class="estiloBoton" onclick="ejecutarBusqueda();"/>
           </div>
         </div>
 
@@ -103,7 +102,7 @@
               />
             </div>
             <div class="contenedorBoton">
-              <input type="button" value="LIMPIAR" class="estiloBoton" />
+              <input type="button" value="LIMPIAR" class="estiloBoton" onclick="limpiarCampos();"/>
             </div>
           </div>
           <div id="tablaEmpleados" class="areaTabla"></div>
@@ -124,7 +123,7 @@
             </div>
           </div>
           <div class="contenedorBoton">
-            <input type="button" value="BUSCAR" class="estiloBoton" />
+            <input type="button" value="BUSCAR" class="estiloBoton" onclick="ejecutarBusqueda();"/>
           </div>
         </div>
 
