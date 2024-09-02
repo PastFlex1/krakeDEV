@@ -245,20 +245,18 @@ calcularAporteEmpleador = function(sueldo) {
 }
 
 guardarRol = function() {
-    // Obtener valores de los campos de la pantalla
+
     let nombre = recuperarTextoDiv("infoNombre");
     let cedula = recuperarTextoDiv("infoCedula");
     let sueldo = recuperarFloatDiv("infoSueldo");
     let valorAPagar = recuperarFloatDiv("infoPago");
     let aporteIESS = recuperarFloatDiv("infoIESS");
 
-    // Calcular el aporte al IESS del empleador (suponiendo que la función calcularAporteEmpleador existe)
     let aporteEmpleador = calcularAporteEmpleador(sueldo);
 
-    // Crear un objeto rol
     let rol = {};
 
-    // Agregar atributos al objeto rol
+
     rol.nombre = nombre;
     rol.cedula = cedula;
     rol.sueldo = sueldo;
@@ -266,17 +264,14 @@ guardarRol = function() {
     rol.aporteIESS = aporteIESS;
     rol.aporteEmpleador = aporteEmpleador
 
-    // Invocar a la función agregarRol (asumiendo que ya existe)
     agregarRol(rol);
     mostrarOpcionRol(rol);
     mostrarRoles();
     mostrarTotales();
 
 
-    // Deshabilitar el botón GUARDAR (asumiendo que el botón tiene el id 'btnGuardar')
     document.getElementById("btnRol").disabled = true;
 
-    // Limpiar campos (opcional si tienes una función para limpiar)
 };
 
 
@@ -297,12 +292,10 @@ mostrarRoles = function() {
 }
 
 mostrarTotales = function() {
-    // Variables para almacenar los totales
     let totalEmpleado = 0;
     let totalEmpleador = 0;
     let totalAPagar = 0;
 
-    // Barrer el arreglo de roles
     for (let i = 0; i < roles.length; i++) {
         let rol = roles[i];
         totalEmpleado += rol.aporteEmpleado || 0;
@@ -310,12 +303,10 @@ mostrarTotales = function() {
         totalAPagar += rol.valorAPagar || 0;
     }
 
-    // Mostrar los totales en los campos respectivos
     mostrarTexto("infoAporteEmpleado", totalEmpleado.toFixed(2));
     mostrarTexto("infoAporteEmpresa", totalEmpleador.toFixed(2));
     mostrarTexto("infoTotalPago", totalAPagar.toFixed(2));
 
-    // Calcular y mostrar el total de la nómina
     let totalNomina = totalEmpleado + totalEmpleador + totalAPagar;
     mostrarTexto("totalNomina", totalNomina.toFixed(2));
 };
