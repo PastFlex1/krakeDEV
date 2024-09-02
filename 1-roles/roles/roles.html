@@ -7,7 +7,7 @@
     <script src="utilitariosCadenas.js"></script>
   </head>
 
-  <body onload="mostrarOpcionEmpleado(); deshabilitarCampos();">
+  <body onload="mostrarOpcionRol(); deshabilitarCampos();">
     <div class="menu">
       <div class="contenedorBoton">
         <input
@@ -123,7 +123,7 @@
             </div>
           </div>
           <div class="contenedorBoton">
-            <input type="button" value="BUSCAR" class="estiloBoton" onclick="ejecutarBusqueda();"/>
+            <input type="button" value="BUSCAR" class="estiloBoton" onclick="buscarPorRol();"/>
           </div>
         </div>
 
@@ -155,7 +155,7 @@
           </div>
           <div class="botones">
             <div class="contenedorBoton">
-              <input type="button" value="CALCULAR" class="estiloBoton" />
+              <input type="button" value="CALCULAR" class="estiloBoton" onclick="calcularRol();"/>
             </div>
           </div>
           <div class="ingresoDatos">

@@ -70,3 +70,16 @@ mostrarOpcionResumen = function() {
     ocultarComponente('divRol');
 };
 
+recuperarTextoDiv = function(idDiv) {
+    const div = document.getElementById(idDiv);
+    return div ? div.textContent : '';
+};
+
+recuperarFloatDiv = function(idDiv) {
+    return parseFloat(recuperarTextoDiv(idDiv)) || 0;
+};
+
+recuperarIntDiv = function(idDiv) {
+    return parseInt(recuperarTextoDiv(idDiv)) || 0;
+};
+

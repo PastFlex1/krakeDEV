@@ -165,3 +165,48 @@ ejecutarBusqueda = function() {
         esNuevo = false;
     }
 };
+
+buscarPorRol = function() {
+    const idEmpleado = recuperarTexto("txtBusquedaCedulaRol");
+    const empleado = buscarEmpleado(idEmpleado); 
+    
+    if (empleado) {
+        mostrarTexto('infoCedula', empleado.cedula);
+        mostrarTexto('infoNombre', empleado.nombre + " " + empleado.apellido);
+        mostrarTexto('infoSueldo', empleado.sueldo.toFixed(2));
+    } else {
+        alert('EMPLEADO NO EXISTE');
+    }
+};
+
+calcularAporteEmpleado = function(sueldo) {
+    return sueldo * 0.0945;
+};
+
+calcularValorAPagar = function(sueldo, aporteIESS, descuento) {
+    return sueldo - aporteIESS - descuento;
+};
+
+calcularRol = function() {
+    const sueldo = recuperarFloatDiv('infoSueldo');
+    let descuento = recuperarIntDiv('txtDescuentos');
+
+    if (isNaN(sueldo) || isNaN(descuento)) {
+        alert('Por favor ingresa valores numéricos válidos');
+        return;
+    }
+
+    if (isNaN(descuento) || descuento < 0 || descuento > sueldo) {
+        alert('El descuento no es válido');
+        return;
+    }
+
+    const aporteEmpleado = calcularAporteEmpleado(sueldo);
+    mostrarTexto('infoIESS', aporteEmpleado.toFixed(2)); // Muestra el aporte con dos decimales
+    console.log(aporteEmpleado);
+
+    const valorAPagar = calcularValorAPagar(sueldo, aporteEmpleado, descuento);
+    mostrarTexto('infoPago', valorAPagar.toFixed(2)); // Muestra el valor a pagar con dos decimales
+    console.log(valorAPagar);
+};
+
