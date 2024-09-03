@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "krakedev2-21b9d",
+    "proyecto 2.0": "krakedev2-21b9d"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

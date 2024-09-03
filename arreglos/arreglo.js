@@ -91,3 +91,5 @@ generarTabla = function(){
     contenidoTabla+= "<table><tr><td>UNO</td></tr></table>";
     cmpTabla.innerHTML = contenidoTabla;
 }
+
+

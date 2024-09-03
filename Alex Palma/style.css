@@ -1,0 +1,135 @@
+body {
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #217023;
+}
+
+.ingresoDatos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.tituloCampo {
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.cajaTexto {
+    border-radius: 4px;
+    border: 1px solid #217023;
+    font-size: 14px;
+    color: #555353;
+    padding: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 200px;
+}
+
+.error {
+    color: red;
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.estiloBoton {
+    background-color: #217023;
+    border: 1px solid #217023;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    border-radius: 5px;
+    width: 120px;
+    cursor: pointer;
+}
+
+.estiloBoton:hover {
+    background-color: white;
+    color: #217023;
+    border: 1px solid #217023;
+}
+
+.estiloBoton:active {
+    background-color: #217023;
+    color: white;
+}
+
+.estiloBoton:disabled {
+    background-color: gray;
+    color: #232623;
+    border: 1px solid #232623;
+    cursor: not-allowed;
+}
+
+.areaTabla {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #f2f2f2;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: center;
+    padding: 8px;
+}
+
+th {
+    background-color: #217023;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:nth-child(odd) {
+    background-color: #e0e0e0;
+}
+
+p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #217023;
+}

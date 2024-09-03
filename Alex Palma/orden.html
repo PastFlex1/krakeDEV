@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="orden.js"></script>
+    <script src="utilitarios.js"></script>
+  </head>
+  <body onload="mostrarTablaPersonas();">
+    <div class="principal">
+      <div class="titulo">
+        <h1>Registro de Personas</h1>
+      </div>
+      <div class="ingresoDatos">
+        <div class="tituloCampo">
+          <label for="nombre">Nombre:</label>
+          <label for="edad">Edad:</label>
+        </div>
+        <div>
+          <input
+            type="text"
+            id="nombre"
+            class="cajaTexto"
+            placeholder="Ingrese nombre"
+          />
+          <div id="errorNombre" class="error"></div>
+          <input
+            type="text"
+            id="edad"
+            class="cajaTexto"
+            placeholder="Ingrese edad"
+          />
+          <div id="errorEdad" class="error"></div>
+        </div>
+      </div>
+      <div class="botones">
+        <button class="estiloBoton" onclick="agregarPersona()">GUARDAR</button>
+      </div>
+      <div class="areaTabla" id="tablaPersonas"></div>
+      <button onclick="determinarMayor()">ENCONTRAR MAYOR</button>
+      <p id="resultadoMayor"></p>
+
+      <button onclick="determinarMenor()">ENCONTRAR MENOR</button>
+      <p id="resultadoMenor"></p>
+    </div>
+    <script src="orden.js"></script>
+    <!-- Asegúrate de tener este archivo JS -->
+  </body>
+</html>
